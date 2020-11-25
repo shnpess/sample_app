@@ -1,0 +1,13 @@
+<h1>memo</h1>
+
+<% @memos.each do |memo| %>
+    <div class="memos">
+        <%= link_to memo_path(memo.id) do %>
+        <%= memo.id %>
+        <% end %>
+    </div>
+<% end %>
+<input type="text"><br><br>
+<textarea  rows="4" cols="40">本文を記入します。</textarea><br>
+
+<input type="submit" value="送信">
