@@ -6,14 +6,13 @@ public class Hello {
 
     public static void main(String[] args) throws SQLException {
         String hostname = "localhost";
-        String dbname = "<project_name>_development";
-        String username = "postgres";
+        String dbname = "sample_app_development";
+        String username = "shun";
         String password = "pess01";
         Connection conn = null;
         try {
             Class.forName("org.postgresql.Driver");
-            conn = DriverManager.getConnection("jdbc:postgresql://" + hostname
-                    + ":5432/" + dbname, username, password);
+            conn = DriverManager.getConnection("jdbc:postgresql://" + hostname + ":5432/" + dbname, username, password);
             System.out.println("接続成功");
         } catch (Exception e) {
             e.printStackTrace();
